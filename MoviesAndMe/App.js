@@ -6,7 +6,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.main_container}>
-      <Text>Application de recherche de film.</Text>
+      <Text style={styles.title}>Application de recherche de film.</Text>
       <Search />
       
       <StatusBar style="auto" />
@@ -19,7 +19,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: 20
   },
+  title: {
+    textAlign: 'center',
+  }
 });

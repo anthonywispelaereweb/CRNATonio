@@ -9,7 +9,7 @@ import {
 } from "react-native";
 
 import films from '../Helpers/filmsData';
-
+import FilmItem from "./FilmItem";
 class Search extends React.Component {
   render() {
     return (
@@ -20,7 +20,7 @@ class Search extends React.Component {
         <FlatList
           data={films}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => <Text>{item.title}</Text>}
+          renderItem={({ item }) => <FilmItem film={item}/>}
         />
       </View>
     );
@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginLeft: 5,
     marginRight: 5,
-    alignItems: "center",
     display: "flex",
     height: 80,
     flex: 1,
@@ -47,6 +46,8 @@ const styles = StyleSheet.create({
   },
   btn: {
     height: 50,
+    marginLeft: 5,
+    marginRight: 5,
   },
 });
 
