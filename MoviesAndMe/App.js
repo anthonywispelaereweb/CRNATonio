@@ -1,15 +1,15 @@
-import Search from './Components/Search';
+// import Search from './Components/Search';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-// import Navigation from './Navigation/Navigation';
+import Navigation from './Navigation/Navigation';
 
 export default function App() {
   return (
     <View style={styles.main_container}>
       <Text style={styles.title}>Application de recherche de film.</Text>
-      <Search />
-      {/* <Navigation /> */}
+      {/* <Search /> */}
+      <Navigation />
       <StatusBar style="auto" />
     </View>
   );
